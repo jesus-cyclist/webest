@@ -1,0 +1,62 @@
+.contacts {
+  height: fit-content;
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 328px;
+  width: 100%;
+  grid-area: contacts;
+
+  .contacts__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2px;
+    margin-bottom: 20px;
+
+    .contacts__title {
+      font-family: Exo2B;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--color-accent);
+    }
+
+    .contacts__booking {
+      color: var(--color-secondary);
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .contacts__call {
+      width: fit-content;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-column-gap: 5px;
+      .contacts__telephone {
+        font-family: Exo2B;
+        color: #00cdff;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .contacts__text {
+        color: var(--color-secondary);
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .contacts__button {
+    width: 100%;
+    max-width: 288px;
+    padding: 14px 50px;
+    border-radius: 30px;
+    font-size: 14px;
+    line-height: 14px;
+    background: #00cdff;
+    border: none;
+    font-family: Exo2B;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}

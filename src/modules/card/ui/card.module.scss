@@ -1,0 +1,49 @@
+@import '@/styles/mixins.scss';
+
+.card {
+  padding: 20px 17px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @include desktop {
+    width: 100%;
+    padding: 37px 50px;
+  }
+
+  .header {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+      'galery'
+      'title';
+
+    @include desktop {
+      grid-template-areas:
+        'title'
+        'galery';
+    }
+  }
+
+  .description {
+    height: fit-content;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+      'list'
+      'contacts'
+      'text';
+
+    @include desktop {
+      grid-row-gap: 30px;
+      grid-template-areas:
+        'list contacts'
+        'text contacts';
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import url(./minireset.min.scss);
+@import url(./global.scss);
+@import url(./mixins.scss);
+
+@font-face {
+  font-family: 'Exo2R';
+  font-style: normal;
+  font-weight: 400;
+  src: url(@/assets/fonts/Exo2-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Exo2B';
+  font-style: normal;
+  font-weight: 700;
+  src: url(@/assets/fonts/Exo2-Bold.ttf) format('truetype');
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Exo2R';
+}
+
+body > div {
+  height: 100%;
+}

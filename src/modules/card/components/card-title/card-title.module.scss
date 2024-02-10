@@ -1,0 +1,91 @@
+@import '@/styles/mixins.scss';
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 10px;
+  grid-area: title;
+
+  @include desktop {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.placeInfo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 5px;
+
+  .placeInfo__title {
+    font-family: Exo2B;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-accent);
+  }
+
+  .placeInfo__place {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-secondary);
+  }
+}
+
+.costInfo {
+  height: 24px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 5px;
+  grid-template-areas: 'title cost icon';
+  font-size: 14px;
+  line-height: 18px;
+
+  @include desktop {
+    justify-self: end;
+    grid-column-gap: 18px;
+    justify-items: end;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'title  icon'
+      'cost icon';
+  }
+
+  .costInfo__title {
+    font-family: Exo2B;
+    color: var(--color-accent);
+    font-size: 14px;
+    line-height: 18px;
+    grid-area: title;
+  }
+
+  .costInfo__text {
+    color: var(--color-secondary);
+    grid-area: cost;
+  }
+
+  .costInfo__link {
+    width: 24px;
+    height: 24px;
+    background: #edf3f7;
+    border-radius: 4px;
+    padding: 5.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: icon;
+    justify-self: end;
+
+    @include desktop {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      padding: 9px;
+    }
+  }
+}
