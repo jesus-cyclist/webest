@@ -1,5 +1,6 @@
 {
-  "name": "client",
+  "homepage": "https://jesyscyclist.github.io/webest-website",
+  "name": "webest",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,10 +10,9 @@
     "build:prod": "webpack --env mode=production",
     "build:mobile": "webpack --env mode=production --env platform=mobile",
     "build:desktop": "webpack --env mode=production --env platform=desktop",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d build:prod",
     "typecheck": "tsc"
-
   },
   "keywords": [],
   "author": "Ильин Николай",
